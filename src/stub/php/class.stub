@@ -1,0 +1,14 @@
+//php类模板
+
+#namespace
+
+#uses
+
+class @name #extends #interface
+{
+
+    %property
+
+    %function
+
+}

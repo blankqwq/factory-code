@@ -1,0 +1,24 @@
+{
+    "name": "blankqwq/factory-code",
+    "description": "A code  builder.",
+    "keywords": [
+        "composer",
+        "factory",
+        "php",
+        "make-code"
+    ],
+    "bin": [
+        "bin/factory"
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Blankqwq\\FactoryCode\\": "src"
+        }
+    },
+    "require": {
+        "symfony/console": "^4.4",
+        "symfony/process": "^4.4",
+        "symfony/filesystem": "^4.4"
+    }
+}

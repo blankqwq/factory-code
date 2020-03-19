@@ -1,0 +1,7 @@
+//函数模板
+
+#static #type #adorn function @name(#args){
+
+    #content
+
+}
