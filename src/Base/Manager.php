@@ -1,15 +1,12 @@
 <?php
 
-
 namespace Blankqwq\FactoryCode\Base;
-
 
 use Blankqwq\FactoryCode\Engine\Engine;
 use Blankqwq\FactoryCode\Exception\NoDriverException;
 
 abstract class Manager
 {
-
     /**
      * @var Engine
      */
@@ -17,28 +14,27 @@ abstract class Manager
 
     /**
      * @var array
-     * 配置文件
+     *            配置文件
      */
     protected $config = [];
 
     /**
      * @var string
-     * 格式化函数名称
+     *             格式化函数名称
      */
     protected $functionName = 'create%sDriver';
 
     /**
      * @var null
-     * 生产工厂
+     *           生产工厂
      */
     protected $factory = null;
 
     /**
      * @var array
-     * 驱动集合
+     *            驱动集合
      */
     private $driverSet = [];
-
 
     public function __construct($config = [])
     {
@@ -48,8 +44,9 @@ abstract class Manager
     /**
      * @param $name
      * @param Engine|null $engine
+     *
      * @return Engine
-     * 存入或者取出驱动
+     *                存入或者取出驱动
      */
     public function driver(string $name, Engine $engine = null): Engine
     {
@@ -58,9 +55,10 @@ abstract class Manager
 
     /**
      * @param string $name
-     * @param array $arguments
+     * @param array  $arguments
+     *
      * @return Engine
-     * 创建驱动
+     *                创建驱动
      */
     protected function make(string $name, array $arguments): Engine
     {
@@ -69,9 +67,11 @@ abstract class Manager
 
     /**
      * @param string $name
-     * @return Engine
+     *
      * @throws NoDriverException
-     * 创建驱动
+     *                           创建驱动
+     *
+     * @return Engine
      */
     public function createDriver($name = 'default'): Engine
     {
@@ -79,12 +79,11 @@ abstract class Manager
         if (method_exists($this, $method)) {
             $driver = $this->{$method}($this->config);
         } else {
-            throw new NoDriverException('【' . $name . '】driver is not exist');
+            throw new NoDriverException('【'.$name.'】driver is not exist');
         }
+
         return $this->driver($name, $driver);
     }
-
-
 
     /**
      * @return array
@@ -96,20 +95,21 @@ abstract class Manager
 
     /**
      * @param array $config
+     *
      * @return Engine
-     * 创建默认驱动
+     *                创建默认驱动
      */
     public function createDefaultDriver($config = []): Engine
     {
         $driver = $this->make($this->driverSet['default'], $config);
     }
 
-
     /**
      * @param $name
      * @param $arguments
+     *
      * @return mixed
-     * 驱动中调用方法
+     *               驱动中调用方法
      */
     public function __call($name, $arguments)
     {

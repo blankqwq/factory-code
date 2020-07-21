@@ -1,10 +1,7 @@
 <?php
 
-
 namespace Blankqwq\FactoryCode\Command;
 
-
-use Blankqwq\FactoryCode\Bootstrap;
 use Blankqwq\FactoryCode\Traits\Helper;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputDefinition;
@@ -22,11 +19,11 @@ class CreateClassCommand extends Command
             ->setDescription('快速闯将类')
             ->setHelp('这里，你可以创建任何类')
             ->setDefinition(
-                new InputDefinition(array(
+                new InputDefinition([
                     new InputOption('type', '', InputOption::VALUE_REQUIRED, '类型: curd|sort|excel'),
                     new InputOption('name', '', InputOption::VALUE_REQUIRED, '控制器名称: controller name'),
                     new InputOption('stub', '', InputOption::VALUE_OPTIONAL, '指定模板样式'),
-                ))
+                ])
             );
     }
 
@@ -34,11 +31,10 @@ class CreateClassCommand extends Command
     {
 //        $input->getOption('type')
         $output->writeln([
-            'Start Creating :' . $input->getOption('name') . ' ' . $input->getOption('type'),
+            'Start Creating :'.$input->getOption('name').' '.$input->getOption('type'),
             '============',
             '',
         ]);
         //创建子进程添加函数|变量
     }
-
 }

@@ -1,10 +1,8 @@
 <?php
 
-
 namespace Blankqwq\FactoryCode;
 
-
-use \Symfony\Component\Console\Application as BasicApplication;
+use Symfony\Component\Console\Application as BasicApplication;
 
 class Application extends BasicApplication
 {
@@ -15,8 +13,4 @@ class Application extends BasicApplication
     {
         parent::__construct($this->name, $this->version);
     }
-
-
-
-
 }

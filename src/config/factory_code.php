@@ -6,11 +6,11 @@ return [
         \Blankqwq\FactoryCode\Command\CreateStubCommand::class,
         \Blankqwq\FactoryCode\Command\CreateControllerCommand::class,
         \Blankqwq\FactoryCode\Command\CreateModelCommand::class,
-        \Blankqwq\FactoryCode\Command\CreateClassCommand::class
+        \Blankqwq\FactoryCode\Command\CreateClassCommand::class,
     ],
     //生产代码类型
     'type' => [
-        'model' => \Blankqwq\FactoryCode\Type\MakeModel::class,
+        'model'      => \Blankqwq\FactoryCode\Type\MakeModel::class,
         'controller' => \Blankqwq\FactoryCode\Type\MakeController::class,
     ],
     //生成文件后缀
@@ -31,14 +31,14 @@ return [
     'cache' => [
         'enable' => true,
         'engine' => 'Cache',
-        'type' => 'Facade',
+        'type'   => 'Facade',
     ],
     //权限校验
     'gates' => [
         'enable' => false,
-        'login' => '',
-        'guest' => '',
-        'diy' => [],
+        'login'  => '',
+        'guest'  => '',
+        'diy'    => [],
     ],
     //表单校验
     'validate' => [
@@ -55,8 +55,8 @@ return [
                 'name_space' => 'App\Controllers',
             ],
             'default' => [
-                'prefix' => null,
-                'suffix' => 'Controllers',
+                'prefix'     => null,
+                'suffix'     => 'Controllers',
                 'name_space' => null,
             ],
         ],
@@ -70,8 +70,8 @@ return [
                 'name_space' => 'App\Models',
             ],
             'default' => [
-                'prefix' => null,
-                'suffix' => null,
+                'prefix'     => null,
+                'suffix'     => null,
                 'name_space' => null,
             ],
         ],
@@ -79,10 +79,9 @@ return [
         //Request模板
         'request' => [
             'laravel' => [
-                'name_space' => 'App\Http\Requests'
-            ]
+                'name_space' => 'App\Http\Requests',
+            ],
         ],
-    ]
-
+    ],
 
 ];
