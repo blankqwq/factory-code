@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Blankqwq\FactoryCode\Engine;
-
 
 use Blankqwq\FactoryCode\Base\EngineBase;
 
