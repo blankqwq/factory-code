@@ -16,7 +16,4 @@ class Application extends BasicApplication
         parent::__construct($this->name, $this->version);
     }
 
-
-
-
 }

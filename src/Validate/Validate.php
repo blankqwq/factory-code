@@ -11,6 +11,13 @@ namespace Blankqwq\FactoryCode\Validate;
 class Validate
 {
 
+    /**
+     * @param $rule
+     * @param $message
+     * @param $content
+     * @return array
+     * 校验生成的代码是否正确
+     */
     public static function checkFromArray($rule, $message, $content): array
     {
         return [];

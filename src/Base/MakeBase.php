@@ -47,11 +47,19 @@ abstract class MakeBase
 
     }
 
+    /**
+     * 设置属性进行生成
+     * @param array $set
+     */
     public function set($set = []): void
     {
 
     }
 
+    /**
+     * 将某属性推入栈中
+     * @param array $put
+     */
     public function put($put = []): void
     {
 

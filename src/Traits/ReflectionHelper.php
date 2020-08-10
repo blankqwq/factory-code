@@ -10,11 +10,13 @@ namespace Blankqwq\FactoryCode\Traits;
  */
 trait ReflectionHelper
 {
-    public function relectionClass(){
+    public function relectionClass()
+    {
 
     }
 
-    public function getModelContent(){
+    public function getModelContent()
+    {
 
     }
 

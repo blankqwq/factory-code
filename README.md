@@ -21,7 +21,9 @@ $ composer require blankqwq/factoryCode -vvv
     
 > 创建模板`php bin/factory create:stub --name CreateView --stub view.stub `
 
-
+> 是否需要高难度编译原理版本 -> 杀鸡焉用牛刀
+                使用范围 ->  确认范围与扩展
+                改变的只有生产-> 开始的生产是简陋的
 #### 编写模板
 
     @单个名称

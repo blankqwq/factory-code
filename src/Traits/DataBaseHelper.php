@@ -13,7 +13,8 @@ trait DataBaseHelper
     /**
      * 获取数据库字段
      */
-    public function getTableFilelds(){
+    public function getTableFilelds()
+    {
 
     }
 

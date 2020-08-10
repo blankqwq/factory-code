@@ -6,7 +6,7 @@ namespace Blankqwq\FactoryCode\Traits;
 
 use Blankqwq\FactoryCode\Bootstrap;
 
-trait Helper
+trait ManagerHelper
 {
     protected $manager = null;
 

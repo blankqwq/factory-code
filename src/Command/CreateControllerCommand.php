@@ -5,7 +5,7 @@ namespace Blankqwq\FactoryCode\Command;
 
 
 use Blankqwq\FactoryCode\Bootstrap;
-use Blankqwq\FactoryCode\Traits\Helper;
+use Blankqwq\FactoryCode\Traits\ManagerHelper;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputDefinition;
 use Symfony\Component\Console\Input\InputInterface;
@@ -14,7 +14,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class CreateControllerCommand extends Command
 {
-    use Helper;
+    use ManagerHelper;
 
     protected function configure()
     {
