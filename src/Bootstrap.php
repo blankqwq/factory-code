@@ -1,34 +1,29 @@
 <?php
 
-
 namespace Blankqwq\FactoryCode;
 
-
-use Blankqwq\FactoryCode\Command\CreateModelCommand;
 use Symfony\Component\Filesystem\Filesystem;
 
 /**
- * Class Bootstrap
- * @package Blankqwq\FactoryCode
- * 引导程序运行
+ * Class Bootstrap.
  */
 class Bootstrap
 {
     /**
      * @var array
-     * 配置内容
+     *            配置内容
      */
     protected $config = [];
 
     /**
      * @var Application
-     * console Application
+     *                  console Application
      */
     protected $app = null;
 
     /**
      * @var Bootstrap
-     * 单例模式
+     *                单例模式
      */
     protected static $instance = null;
 
@@ -39,7 +34,7 @@ class Bootstrap
 
     /**
      * @var Filesystem
-     * 文件系统
+     *                 文件系统
      */
     private $fileSystem;
 
@@ -51,11 +46,12 @@ class Bootstrap
         $this->createManager();
     }
 
-    public static function getInstance(): ?Bootstrap
+    public static function getInstance(): ?self
     {
         if (empty(static::$instance)) {
             self::$instance = new self();
         }
+
         return self::$instance;
     }
 
@@ -75,17 +71,16 @@ class Bootstrap
         $this->app->run();
     }
 
-
     public function defineDir(): void
     {
         define('DS', DIRECTORY_SEPARATOR);
-        define('STUB_DEFAULT_DIR', __DIR__ . DS . 'stub');
-        define('CONFIG_DEFAULT_DIR', __DIR__ . DS . 'config');
+        define('STUB_DEFAULT_DIR', __DIR__.DS.'stub');
+        define('CONFIG_DEFAULT_DIR', __DIR__.DS.'config');
     }
 
     public function loadConfig(): void
     {
-        $this->config = require CONFIG_DEFAULT_DIR . DS . 'factory_code.php';
+        $this->config = require CONFIG_DEFAULT_DIR.DS.'factory_code.php';
     }
 
     public function createManager(): void
@@ -112,6 +107,4 @@ class Bootstrap
     {
         return $this->config;
     }
-
-
 }

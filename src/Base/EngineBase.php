@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Blankqwq\FactoryCode\Base;
-
 
 use Blankqwq\FactoryCode\Engine\Engine;
 
@@ -12,8 +10,9 @@ abstract class EngineBase implements Engine
 
     /**
      * EngineBase constructor.
+     *
      * @param array $config
-     * 构造函数
+     *                      构造函数
      */
     public function __construct(array $config = [])
     {
@@ -26,47 +25,44 @@ abstract class EngineBase implements Engine
      */
     protected function includeStub($type)
     {
-
     }
 
     /**
-     * 编译模板文件
+     * 编译模板文件.
      */
     protected function compile(): void
     {
-
     }
 
     /**
-     * 链接其他模板文件
+     * 链接其他模板文件.
      */
     protected function id(): void
     {
-
     }
 
     /**
-     * 替换内容
+     * 替换内容.
      */
     protected function replace(): void
     {
-
     }
 
     /**
-     * 加载模板文件
+     * 加载模板文件.
+     *
      * @param $stubName
      */
     protected function loadStub($stubName): void
     {
-
     }
 
     /**
      * @param $fileName
      * @param $content
+     *
      * @return bool
-     * 将生成的模板文件写入
+     *              将生成的模板文件写入
      */
     public function putContent($fileName, $content): bool
     {
@@ -76,11 +72,10 @@ abstract class EngineBase implements Engine
     /**
      * @param $fileName
      * 遵循psr 规范
+     *
      * @return bool
      */
-    public function phpFix($fileName):bool
+    public function phpFix($fileName): bool
     {
-
     }
-
 }

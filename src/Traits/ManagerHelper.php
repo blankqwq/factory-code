@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Blankqwq\FactoryCode\Traits;
-
 
 use Blankqwq\FactoryCode\Bootstrap;
 
@@ -16,5 +14,4 @@ trait ManagerHelper
 
         parent::__construct($name);
     }
-
 }
